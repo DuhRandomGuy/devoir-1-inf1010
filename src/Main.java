@@ -1,8 +1,10 @@
 import java.util.List;
 import java.util.Scanner;
-import Reseau.PaquetReseau;
+import Reseau.*;
 import Transport.ControleurTransport;
-import Reseau.ReseauClient;
+import Gestion.GestionConnexion;
+import Simulation.SimulationAleatoire;
+import Segmentation.Segmentation;
 import java.util.Random;
 
 public class Main {
@@ -71,6 +73,12 @@ public class Main {
     private static void transfertDonnees() {
         System.out.print("Entrez l'adresse source: ");
         int adresseSource = scanner.nextInt();
+
+        if (!gestionConnexion.estConnecte(adresseSource)) {
+            System.out.println("Aucune connexion active pour cette adresse source.");
+            return;
+        }
+
         System.out.print("Entrez l'adresse destination: ");
         int adresseDestination = scanner.nextInt();
         scanner.nextLine();  // Consommer la ligne
@@ -92,6 +100,7 @@ public class Main {
         }
     }
 
+
     // Phase 3 : Libération de connexion
     private static void liberationConnexion() {
         System.out.print("Entrez l'adresse source: ");
@@ -100,7 +109,7 @@ public class Main {
         int adresseDestination = scanner.nextInt();
 
         transport.libererConnexion(adresseSource, adresseDestination);
-        reseau.traiterLibérationConnexion(new PaquetReseau(adresseSource, adresseDestination, "N_DISCONNECT", null));
+        reseau.traiterLibérationConnexion(new PaquetReseau(adresseSource, adresseDestination, TypePaquet.N_DISCONNECT, null));
         gestionConnexion.supprimerConnexion(adresseSource);
     }
 }

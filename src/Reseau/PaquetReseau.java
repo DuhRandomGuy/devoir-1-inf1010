@@ -3,10 +3,10 @@ package Reseau;
 public class PaquetReseau {
     private int adresseSource;
     private int adresseDestination;
-    private String typePaquet;
+    private TypePaquet typePaquet;
     private String donnees;
 
-    public PaquetReseau(int adresseSource, int adresseDestination, String typePaquet, String donnees) {
+    public PaquetReseau(int adresseSource, int adresseDestination, TypePaquet typePaquet, String donnees) {
         this.adresseSource = adresseSource;
         this.adresseDestination = adresseDestination;
         this.typePaquet = typePaquet;
@@ -21,11 +21,15 @@ public class PaquetReseau {
         return adresseDestination;
     }
 
-    public String getTypePaquet() {
+    public TypePaquet getTypePaquet() {
         return typePaquet;
     }
 
     public String getDonnees() {
         return donnees;
+    }
+
+    public void setTypePaquet(TypePaquet typePaquet) {
+        this.typePaquet = typePaquet;
     }
 }
