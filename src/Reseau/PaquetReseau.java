@@ -13,6 +13,7 @@ public class PaquetReseau {
         this.donnees = donnees;
     }
 
+    // methodes pour acceder aux information du paquet
     public int getAdresseSource() {
         return adresseSource;
     }

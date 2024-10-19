@@ -1,0 +1,4 @@
+Connexion demandée de 12 vers 23
+Connexion acceptée.
+Connexion demandée de 570 vers 6400
+Connexion refusée.
