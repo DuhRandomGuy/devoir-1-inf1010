@@ -12,6 +12,7 @@
 
  import java.util.List;
  import java.util.Scanner;
+ import java.util.Random;
  
  import Gestion.GestionConnexion;
  import Gestion.GestionFichier;
@@ -29,6 +30,8 @@
      private static ControleurTransport transport = new ControleurTransport();
      private static ReseauClient reseau = new ReseauClient();
      private static GestionConnexion gestionConnexion = new GestionConnexion();
+     private static int adresseSource;
+     private static int adresseDestination;
  
      public static void main(String[] args) {
          while (true) {
@@ -84,17 +87,25 @@
      
      private static void etablissementConnexion() {
          // N_CONNECT.req : Transport demande une connexion via le réseau
-         System.out.print("Entrez l'adresse source: ");
-         int adresseSource = scanner.nextInt();
-         System.out.print("Entrez l'adresse destination: ");
-         int adresseDestination = scanner.nextInt();
- 
+         Random random = new Random();
+
+
+         // Générer des adresses distinctes entre 0 et 254
+         adresseSource = random.nextInt(255); // Génère un nombre entre 0 et 254
+         do {
+             adresseDestination = random.nextInt(255);
+         } while (adresseSource == adresseDestination); // Continue de générer jusqu'à ce que l'adresse destination soit distincte
+
+         // Affichage des adresses générées
+         System.out.println("Adresse source générée : " + adresseSource);
+         System.out.println("Adresse destination générée : " + adresseDestination);
+
          // Vérification de la plage des adresses source et destination
          if (!estAdresseSourceValide(adresseSource)) {
              System.out.println("Connexion refusée : Adresse source hors de la plage autorisée.");
              return;
          }
- 
+
          if (!estAdresseDestinationValide(adresseDestination)) {
              System.out.println("Connexion refusée : Adresse destination hors de la plage autorisée.");
              return;
@@ -131,12 +142,12 @@
  
      // Méthode pour vérifier si l'adresse source est dans la plage valide
      private static boolean estAdresseSourceValide(int adresseSource) {
-         return adresseSource >= 500 && adresseSource <= 1000; // Plage de 500 à 1000
+         return adresseSource >= 0 && adresseSource <= 254; // Plage de 500 à 1000
      }
  
      // Méthode pour vérifier si l'adresse destination est dans la plage valide
      private static boolean estAdresseDestinationValide(int adresseDestination) {
-         return adresseDestination >= 6000 && adresseDestination <= 7000; // Plage de 6000 à 7000
+         return adresseDestination >= 0 && adresseDestination <= 254; // Plage de 6000 à 7000
      }
  
      /*****************************************************************************************************************************************************/
@@ -144,11 +155,10 @@
      
      private static void transfertDonnees() {
          // N_DATA.req : Transport demande au réseau de transmettre des données
-         System.out.print("Entrez l'adresse source: ");
-         int adresseSource = scanner.nextInt();
-         System.out.print("Entrez l'adresse destination: ");
-         int adresseDestination = scanner.nextInt();
-         scanner.nextLine();  // Consommer la ligne
+         System.out.println("Utilisation des adresses source et destination établies.");
+         System.out.println("Adresse source : " + adresseSource);
+         System.out.println("Adresse destination : " + adresseDestination);
+
          System.out.print("Entrez les données à transférer: ");
          String donnees = scanner.nextLine();
  
@@ -174,10 +184,9 @@
      
      private static void liberationConnexion() {
          // N_DISCONNECT.req : Transport demande au réseau de libérer la connexion
-         System.out.print("Entrez l'adresse source: ");
-         int adresseSource = scanner.nextInt();
-         System.out.print("Entrez l'adresse destination: ");
-         int adresseDestination = scanner.nextInt();
+         System.out.println("Libération de la connexion entre l'adresse source et l'adresse destination établies.");
+         System.out.println("Adresse source : " + adresseSource);
+         System.out.println("Adresse destination : " + adresseDestination);
  
          // N_DISCONNECT.req : La couche transport demande la libération de la connexion
          transport.libererConnexion(adresseSource, adresseDestination);
