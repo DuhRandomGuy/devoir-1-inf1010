@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82423395-96c1-495d-9972-cea2525eb838" name="Changes" comment="">
+    <list default="true" id="82423395-96c1-495d-9972-cea2525eb838" name="Changes" comment="J'ai modifié la classe main pour respecter la plage d'adressage de 0 et 254 et qu'il génère aléatoirement les adresses. J'ai aussi modifié les méthodes pour les 3 premières options.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +76,30 @@
       <workItem from="1728323305877" duration="343000" />
       <workItem from="1728323676744" duration="525000" />
     </task>
+    <task id="LOCAL-00001" summary="J'ai modifié la classe main pour respecter la plage d'adressage de 0 et 254 et qu'il génère aléatoirement les adresses. J'ai aussi modifié les méthodes pour les 3 premières options.">
+      <option name="closed" value="true" />
+      <created>1729464161972</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729464161972</updated>
+    </task>
+    <task id="LOCAL-00002" summary="J'ai modifié la classe main pour respecter la plage d'adressage de 0 et 254 et qu'il génère aléatoirement les adresses. J'ai aussi modifié les méthodes pour les 3 premières options.">
+      <option name="closed" value="true" />
+      <created>1729464175567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729464175567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="J'ai modifié la classe main pour respecter la plage d'adressage de 0 et 254 et qu'il génère aléatoirement les adresses. J'ai aussi modifié les méthodes pour les 3 premières options." />
+    <option name="LAST_COMMIT_MESSAGE" value="J'ai modifié la classe main pour respecter la plage d'adressage de 0 et 254 et qu'il génère aléatoirement les adresses. J'ai aussi modifié les méthodes pour les 3 premières options." />
   </component>
 </project>
