@@ -1,0 +1,26 @@
+Demande de connexion reçue de 108
+Connexion acceptée pour 108
+Données transférées: Lorsque le processus ET veut libérer la connexion (le cas de la libération par l’entité distante ne sera pas traité), il envoie 
+Données transférées: au processus ER une demande de libération de connexion contenant l’identifiant d’extrémité de connexion réseau et la primitive N
+Données transférées: _DISCONNECT.req.  Le processus ER utilise le service de liaison pour adresser au distant un paquet d’indication de libération. L
+Données transférées: es deux processus peuvent alors libérer les ressources qui étaient utilisées pour la gestion de la connexion. 
+Connexion libérée pour 108
+Demande de connexion reçue de 27
+Connexion acceptée pour 27
+Demande de connexion reçue de 37
+Connexion acceptée pour 37
+Demande de connexion reçue de 228
+Connexion refusée pour 228
+Demande de connexion reçue de 78
+Connexion refusée pour 78
+Connexion libérée pour 78
+Connexion libérée pour 78
+Demande de connexion reçue de 69
+Connexion acceptée pour 69
+Demande de connexion reçue de 128
+Connexion acceptée pour 128
+Données transférées: Le fichier S_lec.txt sert de point d'entrée pour les données simulées provenant de la couche supérieure, que la couche transport
+Demande de connexion reçue de 172
+Connexion acceptée pour 172
+Données transférées: Ceci est un test de transfert de données pour la couche transport.
+Connexion libérée pour 172

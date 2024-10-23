@@ -1,0 +1,20 @@
+Connexion demandée de 88 vers 23
+Connexion acceptée.
+Demande de connexion: 108 -> 153
+Connexion confirmée pour 108
+Libération de connexion: 108
+Demande de connexion de 27 vers 11
+Connexion confirmée pour 27
+Demande de connexion de 37 vers 6
+Connexion confirmée pour 37
+Demande de connexion de 228 vers 21
+Demande de connexion de 78 vers 66
+Libération de connexion de 78
+Libération de connexion de 78
+Demande de connexion de 69 vers 88
+Connexion confirmée pour 69
+Demande de connexion de 128 vers 30
+Connexion confirmée pour 128
+Demande de connexion de 172 vers 74
+Connexion confirmée pour 172
+Libération de connexion de 172
