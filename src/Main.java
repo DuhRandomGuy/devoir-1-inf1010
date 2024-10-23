@@ -24,12 +24,12 @@
  public class Main {
  
      // Scanner pour lire les entrées utilisateur
-     private static Scanner scanner = new Scanner(System.in);
+     private static final Scanner scanner = new Scanner(System.in);
  
      // Initialisation des objets pour gérer les couches transport et réseau
-     private static ControleurTransport transport = new ControleurTransport();
-     private static ReseauClient reseau = new ReseauClient();
-     private static GestionConnexion gestionConnexion = new GestionConnexion();
+     private static final ControleurTransport transport = new ControleurTransport();
+     private static final ReseauClient reseau = new ReseauClient();
+     private static final GestionConnexion gestionConnexion = new GestionConnexion();
      private static int adresseSource;
      private static int adresseDestination;
  
