@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82423395-96c1-495d-9972-cea2525eb838" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/L_lec.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/S_lec.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gestion/GestionConnexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion/GestionConnexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reseau/PaquetReseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reseau/PaquetReseau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Segmentation/Segmentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segmentation/Segmentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Simulation/SimulationAleatoire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulation/SimulationAleatoire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reseau/ReseauClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reseau/ReseauClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transport/ControleurTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transport/ControleurTransport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,14 +27,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2n7Tq6KwSa2STcbrVkHIWF8z5gU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -43,10 +48,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Reseau",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
