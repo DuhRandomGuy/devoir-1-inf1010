@@ -1,10 +1,12 @@
 package Reseau;
 
 public class PaquetReseau {
-    private int adresseSource;
-    private int adresseDestination;
+    private final int adresseSource;
+    private final int adresseDestination;
     private String typePaquet;
     private String donnees;
+
+    private int numConnexion;
 
     public PaquetReseau(int adresseSource, int adresseDestination, String typePaquet, String donnees) {
         this.adresseSource = adresseSource;
@@ -28,5 +30,13 @@ public class PaquetReseau {
 
     public String getDonnees() {
         return donnees;
+    }
+
+    public int getNumConnexion() {
+        return numConnexion;
+    }
+
+    public void setNumConnexion(int numero){
+        this.numConnexion = numero;
     }
 }
