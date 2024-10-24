@@ -57,32 +57,31 @@ public class Main {
 
     // Phase 1 : Établissement de connexion
     private static void etablissementConnexion() throws IOException {
-        // Utilisation de la méthode dans GestionConnexion pour générer des adresses aléatoires distinctes
+        // Générer des adresses aléatoires distinctes
         int[] adresses = GestionConnexion.genererAdressesDistinctes();
-        adresseSource = adresses[0];  // Stocker l'adresse source globalement
-        adresseDestination = adresses[1];  // Stocker l'adresse destination globalement
+        adresseSource = adresses[0];
+        adresseDestination = adresses[1];
 
-        // Phase 1 : Demande de connexion de la couche transport vers la couche réseau
+        // Demande de connexion
         PaquetReseau demande = transport.demandeConnexion(adresseSource, adresseDestination);
         reseau.traiterDemandeConnexion(demande);
 
-        // Tirage aléatoire pour simuler l'acceptation ou le refus de la connexion par la station distante
+        // Tirage aléatoire pour simuler l'acceptation ou le refus de la connexion
         boolean accepte = SimulationAleatoire.tirageConnexion(adresseSource);
         reseau.repondreConnexion(demande, accepte);
 
         if (accepte) {
-            // Confirmer la connexion et l'ajouter dans la gestion des connexions
-            transport.confirmerConnexion(demande);
+            // Ajouter la connexion dans la gestion des connexions
             gestionConnexion.ajouterConnexion(adresseSource);
+            transport.confirmerConnexion(demande);
+            System.out.println("Connexion acceptée.");
         } else {
-            // Si la connexion est refusée, afficher un message
             System.out.println("Connexion refusée.");
         }
     }
 
     // Phase 2 : Transfert de données
     private static void transfertDonnees() throws IOException {
-        // Vérification si une connexion active existe pour l'adresse source
         if (!gestionConnexion.estConnecte(adresseSource)) {
             System.out.println("Aucune connexion active pour cette adresse source.");
             return;
@@ -98,27 +97,31 @@ public class Main {
         // Segmentation des données en paquets de 128 octets
         List<PaquetReseau> paquets = Segmentation.segmenterDonnees(adresseSource, adresseDestination, donnees);
         for (PaquetReseau paquet : paquets) {
-            // Transfert des données vers la couche réseau
             reseau.traiterTransfertDonnees(paquet);
 
-            // Tirage aléatoire pour simuler l'acquittement des paquets depuis L_lec (simulant la couche liaison)
+            // Simuler les acquittements depuis L_lec
             String acquittement = reseau.lireDepuisL_lec();
-            if (acquittement.equals("AcquittementNegatif")) {
-                System.out.println("Erreur: Le paquet n'a pas été reçu correctement.");
-            } else if (acquittement.equals("AucunAcquittement")) {
-                System.out.println("Aucun acquittement reçu pour ce paquet.");
+            if (acquittement == null) {
+                System.out.println("Erreur : Aucun acquittement reçu.");
+            } else if (acquittement.equals("AcquittementNegatif")) {
+                System.out.println("Erreur : Le paquet n'a pas été reçu correctement.");
             } else {
-                System.out.println("Acquittement positif reçu pour ce paquet.");
+                System.out.println("Acquittement positif reçu.");
             }
         }
     }
 
     // Phase 3 : Libération de connexion
     private static void liberationConnexion() throws IOException {
-        // Utilisation des adresses source et destination globalement stockées
-        transport.libererConnexion(adresseSource, adresseDestination);
-        // Transmettre à la couche réseau la libération de la connexion
-        reseau.traiterLibérationConnexion(new PaquetReseau(adresseSource, adresseDestination, TypePaquet.N_DISCONNECT, null));
+        if (!gestionConnexion.estConnecte(adresseSource)) {
+            System.out.println("Aucune connexion active pour cette adresse source.");
+            return;
+        }
+
+        // Libérer la connexion
+        PaquetReseau liberation = transport.libererConnexion(adresseSource, adresseDestination);
+        reseau.traiterLibérationConnexion(liberation);
+
         // Supprimer la connexion de la gestion des connexions
         gestionConnexion.supprimerConnexion(adresseSource);
     }

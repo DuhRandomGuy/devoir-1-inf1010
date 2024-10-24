@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82423395-96c1-495d-9972-cea2525eb838" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/L_lec.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/S_lec.txt" afterDir="false" />
+    <list default="true" id="82423395-96c1-495d-9972-cea2525eb838" name="Changes" comment="Modificaton de la classe Main,reseauclient et Controleur Transport">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gestion/GestionConnexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gestion/GestionConnexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L_ecr.txt" beforeDir="false" afterPath="$PROJECT_DIR$/L_ecr.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reseau/ReseauClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reseau/ReseauClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reseau/PaquetReseau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reseau/PaquetReseau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reseau/TypePaquet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reseau/TypePaquet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Segmentation/Segmentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Segmentation/Segmentation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transport/ControleurTransport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transport/ControleurTransport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +29,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Reseau" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Melchisedeck1299"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DuhRandomGuy/devoir-1-inf1010.git",
+    "accountId": "4766ab48-4074-4713-9f47-b0f587dfb04f"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Reseau",
+    "git-widget-placeholder": "Paquet",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -73,9 +85,30 @@
       <workItem from="1728323305877" duration="343000" />
       <workItem from="1728323676744" duration="525000" />
     </task>
+    <task id="LOCAL-00001" summary="Modificaton de la classe Main,reseauclient et Controleur Transport">
+      <option name="closed" value="true" />
+      <created>1729646857714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729646857714</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modificaton de la classe Main,reseauclient et Controleur Transport">
+      <option name="closed" value="true" />
+      <created>1729646871891</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729646871891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modificaton de la classe Main,reseauclient et Controleur Transport" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificaton de la classe Main,reseauclient et Controleur Transport" />
   </component>
 </project>
